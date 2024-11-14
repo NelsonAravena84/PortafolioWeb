@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,43 +8,56 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-regal-blue">
+    <!--Color de fondo-->
+    <div class="flex -space-x-2">
+      <!--contenedor flex para sidebar y "header" -->
+      <div class="top-screen w-24 h-screen bg-black">Item 1</div>
+      <!--sidebar-->
+      <div class="border-8 border-black top-screen w-screen h-20">
+
+        ⁡⁢⁢⁢<!-- MAIN CONTENEDORES -->⁡
+        <div class="w-5/6 h-200 mx-auto mt-10 p-5 border-2 border-black rounded-lg" >  ⁡⁢⁢⁢<!-- BORDE GENERAL-->⁡
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Elemento 1 -->
+            <div class="border-2 border-black p-6 rounded-lg">
+              <h2 class="text-xl font-semibold">Elemento 1</h2>
+              <p>Este es el primer elemento.</p>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="border-2 border-black p-6 rounded-lg">
+              <h2 class="text-xl font-semibold">Elemento 2</h2>
+              <p>Este es el segundo elemento.</p>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="border-2 border-black p-6 rounded-lg">
+              <h2 class="text-xl font-semibold">Elemento 3</h2>
+              <p>Este es el tercer elemento.</p>
+            </div>
+
+            <!-- Elemento 4 -->
+            <div class="border-2 border-black p-6 rounded-lg">
+              <h2 class="text-xl font-semibold">Elemento 4</h2>
+              <p>Este es el cuarto elemento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--"header"-->
+    </div>
+    <slot />
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
+
+<!--  -->
