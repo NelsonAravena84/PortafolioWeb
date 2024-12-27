@@ -1,0 +1,15 @@
+#root {
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    width: 100vw;  /* Ocupa todo el ancho de la pantalla */
+    display: flex;  /* Usamos flexbox para alinear el contenido */
+    flex-direction: column; /* Aseguramos que los elementos internos se acomoden en columna */
+  }
+  
+  /* Si deseas que el contenido dentro del root se ajuste, puedes usar este estilo */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitamos el desbordamiento horizontal */
+    font-family: Arial, sans-serif;
+  }
+  

@@ -1,14 +1,12 @@
-import LayoutPagina from "../Layout/FootVar";
 import MainPagina from "../Components/MainLanding";
 import OtroMain from "../Components/otromain";
+import Tarjeta from "../Components/Tarjeta";
 
 function LandingMain() {
   return (
     <>
-      <LayoutPagina />
       <MainPagina />
-      <OtroMain />
-
+      <OtroMain titulo="Mis areas de desarrollo" subtitulo="Desarrollo Full-Stack"/>
     </>
   );
 }
