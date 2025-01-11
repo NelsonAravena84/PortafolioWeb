@@ -1,6 +1,8 @@
 import HeaderPortafolio from "../components/HeaderPortafolio";
 import HeroPortafolio from "../components/HeroPortafolio";
 import Habilidades from "../components/Habilidades";
+import Projectos from "../components/Projectos";
+import FooterPagina from "../components/Footer";
 
 function Home() {
   return (
@@ -9,6 +11,8 @@ function Home() {
         <HeaderPortafolio />
         <HeroPortafolio/>
         <Habilidades />
+        <Projectos/>
+        <FooterPagina/>
       </main>
     </>
   );
