@@ -31,7 +31,7 @@ export default function Projects() {
         <Typography variant="h5" sx={{fontFamily: 'Roboto'}}>Proyectos Web</Typography>
         <Box sx={{ display: "grid", gap: 2, mt: 2 }}>
           <BigCard
-            image='dist\logo.ico'
+            image='public/logo.ico'
             titulo="Simple Ideas"
             subtitulo="E-Commerce"
             descripcion="Simpleideas es un ecommerce chileno de amigurumis artesanales que busca expandir sus ventas a nivel nacional con productos hechos a mano y personalizados."
@@ -39,7 +39,7 @@ export default function Projects() {
             enlace = 'https://simpleideas.cl/' />
 
           <BigCard
-            image='dist\mega.jpeg'
+            image='public/mega.jpeg'
             titulo="MegaTec"
             subtitulo="E-Commerce"
             descripcion=" MegaTec tienda especializada en la venta de tecnología, ofreciendo productos modernos y accesibles para todo tipo de usuarios."

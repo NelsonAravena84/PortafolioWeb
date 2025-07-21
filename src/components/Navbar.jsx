@@ -8,7 +8,7 @@ export default function Navbar() {
 
     {/* NOMBRE, PROFESION, ICONO */}
       <Box sx={{ display: "flex", mt:5 }}>
-        <Avatar alt="Remy Sharp" src="dist\selfie.webp" sx={{ width: 86, height: 86 }} />
+        <Avatar alt="Remy Sharp" src="public/selfie.webp" sx={{ width: 86, height: 86 }} />
         <Box sx={{ ml: 2, mt:0}}>
           <Typography variant="h5" sx={{fontFamily: 'Roboto'}}>Nelson Aravena</Typography>
           <Typography  variant="h6" sx={{fontFamily: 'Roboto'}}>Ingeniero en Informática </Typography>
