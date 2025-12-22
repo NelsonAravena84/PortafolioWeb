@@ -53,7 +53,7 @@ export default function Navbar() {
         </Box>
       </Box>
 
-      {/* ICONOS DE CONTACTO */}
+      {/* ICONOS DE CONTACTO aloo*/}
       <Box
         sx={{
           display: "flex",
