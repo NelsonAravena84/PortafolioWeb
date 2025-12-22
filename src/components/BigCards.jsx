@@ -7,11 +7,12 @@ export default function BigCard({ titulo, subtitulo, descripcion, iconos = [], i
   return (
     <Card
       sx={{
-        backgroundColor: 'rgba(10,10,10)',
-        boxShadow: 'none',
-        borderRadius: 2,
-        color: 'gray',
-        padding: 2,
+       backgroundColor: 'rgba(10, 10, 10, 0.45)',
+    backdropFilter: 'blur(6px)',
+    boxShadow: 'none',
+    borderRadius: 2,
+    color: 'gray',
+    p: 2,
       }}
     >
       <Box
@@ -31,7 +32,7 @@ export default function BigCard({ titulo, subtitulo, descripcion, iconos = [], i
             sx={{ width: 64, height: 64 }}
           />
           <Box>
-            <Typography variant="h5" fontWeight={600}>
+            <Typography variant="h5" fontWeight={600} sx={{color:'#aab0ff'}}>
               {titulo}
             </Typography>
             <Typography color="text.secondary">{subtitulo}</Typography>

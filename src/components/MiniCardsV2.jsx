@@ -1,25 +1,24 @@
 import { Card, Box, Typography } from "@mui/material";
-import React from "react";
 
 export default function MiniCardV2({ Icon, nombreicono }) {
   return (
     <Card
-     sx={{
-    backgroundColor: 'black',
-    border: '1px solid gray',
-    boxShadow: 'none',
-    borderRadius: 2, // opcional, puedes ajustar
-    color: 'gray',  // para texto blanco
-    padding: 0.5       // opcional, ajusta si quieres margen interno
-  }}
+      sx={{
+        backgroundColor: 'rgba(255, 255, 255, 0.06)',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(9px)',
+        boxShadow: 'none',
+        borderRadius: 2,
+        border: '1px solid rgba(255,255,255,0.12)',
+        p: 2,
+      }}
     >
       <Box
         sx={{
           display: "flex",
-          alignItems: "center", 
+          alignItems: "center",
           justifyContent: "center",
           gap: 0.5,
-          width: "100%",
         }}
       >
         <Icon size={16} />

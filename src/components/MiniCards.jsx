@@ -15,19 +15,19 @@ export default function MiniCard({ Icon, label, size, enlace }) {
   const open = Boolean(anchorEl);
 
   const iconElement = (
-    <Icon size={size} style={{ color: "gray" }} />
+    <Icon size={size} style={{ color: "#e6e8ff" }} />
   );
 
   return (
     <>
       <Card
         sx={{
-          backgroundColor: 'black',
-          border: '1px solid gray',
-          boxShadow: 'none',
-          borderRadius: 2,
-          color: 'gray',
-          padding: 1,
+         backgroundColor: 'rgba(10, 10, 10, 0.45)',
+    backdropFilter: 'blur(6px)',
+    boxShadow: 'none',
+    borderRadius: 2,
+    color: 'white',
+    p: 2,
         }}
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}

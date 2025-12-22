@@ -1,84 +1,119 @@
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material'
 import Home from './Pages/Home'
 
+/* =======================
+   THEME (AZUL / VIOLETA)
+   ======================= */
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: '#121313',
+      default: '#06060d',
+      paper: '#0b0b1a',
     },
     text: {
-      primary: '#ffffff',
+      primary: '#e6e8ff',
+      secondary: '#aab0ff',
     },
+    primary: {
+      main: '#5b6cff',
+    },
+    secondary: {
+      main: '#7a85ff',
+    },
+  },
+  typography: {
+    fontFamily: `'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif`,
   },
 })
 
-const starStyles = {
-  position: 'absolute',
-  width: '2px',
-  height: '2px',
-  backgroundColor: 'white',
-  borderRadius: '50%',
-  animation: 'twinkle 3s infinite ease-in-out',
-  opacity: 0.8,
-}
+function BackgroundVisual() {
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        zIndex: 0,
+        pointerEvents: 'none',
+        background: `
+          radial-gradient(
+            circle at 30% 40%,
+            #0f1024 0%,
+            #0b0b1a 45%,
+            #06060d 100%
+          )
+        `,
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `radial-gradient(#7a85ff 1px, transparent 1px)`,
+          backgroundSize: '34px 34px',
+          opacity: 0.35,
+        }}
+      />
 
-const starsCount = 400
+      <svg
+        viewBox="0 0 900 600"
+        preserveAspectRatio="xMidYMid slice"
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '65%',
+          height: '100%',
+          opacity: 0.55,
+        }}
+      >
+        <g
+          fill="none"
+          stroke="#5b6cff"
+          strokeWidth="1"
+          strokeOpacity="0.65"
+        >
+          <polygon points="80,140 180,60 310,140 210,260" />
+          <polygon points="210,260 310,140 460,230 350,370" />
+          <polygon points="180,60 350,40 500,150 310,140" />
+          <polygon points="310,140 500,150 610,320 460,230" />
+          <polygon points="350,370 460,230 610,320 500,470" />
+          <polygon points="140,320 210,260 350,370 260,480" />
 
-function randomPosition() {
-  return {
-    top: `${Math.random() * 100}%`,
-    left: `${Math.random() * 100}%`,
-    animationDelay: `${Math.random() * 3}s`,
-    animationDuration: `${1 + Math.random() * 3}s`,
-  }
+          <line x1="80" y1="140" x2="350" y2="370" />
+          <line x1="180" y1="60" x2="460" y2="230" />
+          <line x1="310" y1="140" x2="500" y2="470" />
+          <line x1="140" y1="320" x2="310" y2="140" />
+        </g>
+      </svg>
+    </div>
+  )
 }
 
 export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <div style={{ position: 'relative', minHeight: '100vh', backgroundColor: '#000' }}>
-        {/* Contenedor de estrellas */}
+
+      <div
+        style={{
+          position: 'relative',
+          minHeight: '100vh',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Background */}
+        <BackgroundVisual />
+
+        {/* Content */}
         <div
           style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            overflow: 'hidden',
-            pointerEvents: 'none',
-            zIndex: 0,
+            position: 'relative',
+            zIndex: 1,
           }}
         >
-          {[...Array(starsCount)].map((_, i) => {
-            const pos = randomPosition()
-            return (
-              <div
-                key={i}
-                style={{
-                  ...starStyles,
-                  top: pos.top,
-                  left: pos.left,
-                  animationDelay: pos.animationDelay,
-                  animationDuration: pos.animationDuration,
-                }}
-              />
-            )
-          })}
-        </div>
-
-        {/* Contenido encima */}
-        <div style={{ position: 'relative', zIndex: 1 }}>
           <Home />
         </div>
-
-        {/* Estilos para animación */}
-        <style>{`
-          @keyframes twinkle {
-            0%, 100% { opacity: 0.8; transform: scale(1); }
-            50% { opacity: 0.2; transform: scale(0.8); }
-          }
-        `}</style>
       </div>
     </ThemeProvider>
   )

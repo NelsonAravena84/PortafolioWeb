@@ -4,8 +4,10 @@ export default function AboutMe() {
     return (
         <>
             <Box sx={{ mt: 5 }}>
-                <Typography variant="h5" sx={{fontFamily: 'Roboto'}}>Sobre mi</Typography>
-                <Typography variant="p" sx={{color: 'gray',fontFamily: 'Roboto'}}>Estudiante de Ingeniería en Informática en su ultimo año, con experiencia en desarrollo web Full Stack. He trabajado con tecnologías como React, JavaScript y Material UI para el Front-end, y manejo bases de datos como PostgreSQL y MySQL en el Back-end. He desarrollado proyectos académicos, un e-commerce personal y realicé mi práctica profesional orientada al desarrollo Front-end, creando aplicaciones funcionales, responsivas y con enfoque en la experiencia de usuario. </Typography>
+                <Typography variant="h5" sx={{fontFamily: 'Roboto', color:'#aab0ff'}}>Sobre mi</Typography>
+                <Typography variant="p" sx={{color: '#e6e8ff',fontFamily: 'Roboto'}}>
+              Ingeniero en Informática apasionado por crear soluciones tecnológicas que resuelven problemas reales. Tengo experiencia construyendo aplicaciones web completas desde frontend hasta backend, integrando sistemas IoT y procesando datos para generar valor práctico. Soy una persona curiosa y proactiva que disfruta aprendiendo nuevas tecnologías, optimizando la experiencia del usuario y entregando plataformas rápidas, escalables y mantenibles. He desarrollado e-commerce funcionales y dashboards en tiempo real, siempre priorizando código limpio para contribuir con versatilidad técnica a equipos innovadores.
+                </Typography>
             </Box>
         </>
 
