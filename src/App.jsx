@@ -27,14 +27,19 @@ const darkTheme = createTheme({
   },
 })
 
+/* =======================
+   BACKGROUND (OPTIMIZED)
+   ======================= */
 function BackgroundVisual() {
   return (
     <div
       style={{
-        position: 'absolute',
+        position: 'fixed',
         inset: 0,
         zIndex: 0,
         pointerEvents: 'none',
+        willChange: 'transform',
+        transform: 'translateZ(0)',
         background: `
           radial-gradient(
             circle at 30% 40%,
@@ -45,33 +50,36 @@ function BackgroundVisual() {
         `,
       }}
     >
+      {/* DOT GRID */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `radial-gradient(#7a85ff 1px, transparent 1px)`,
-          backgroundSize: '34px 34px',
-          opacity: 0.35,
+          backgroundImage: `radial-gradient(circle, #7a85ff 1px, transparent 1px)`,
+          backgroundSize: '48px 48px',
+          opacity: 0.25,
         }}
       />
 
+      {/* WIREFRAME SVG */}
       <svg
-        viewBox="0 0 900 600"
+        viewBox="0 0 900 300"
         preserveAspectRatio="xMidYMid slice"
         style={{
           position: 'absolute',
           left: 0,
           top: 0,
-          width: '65%',
+          width: '55%',
           height: '100%',
-          opacity: 0.55,
+          opacity: 0.45,
         }}
       >
         <g
           fill="none"
           stroke="#5b6cff"
           strokeWidth="1"
-          strokeOpacity="0.65"
+          strokeOpacity="0.6"
+          vectorEffect="non-scaling-stroke"
         >
           <polygon points="80,140 180,60 310,140 210,260" />
           <polygon points="210,260 310,140 460,230 350,370" />
@@ -90,30 +98,25 @@ function BackgroundVisual() {
   )
 }
 
+/* =======================
+   APP
+   ======================= */
 export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
 
+      {/* Fondo fijo (no se repinta al hacer scroll) */}
+      <BackgroundVisual />
+
+      {/* Contenido scrolleable */}
       <div
         style={{
           position: 'relative',
-          minHeight: '100vh',
-          overflow: 'hidden',
+          zIndex: 1,
         }}
       >
-        {/* Background */}
-        <BackgroundVisual />
-
-        {/* Content */}
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 1,
-          }}
-        >
-          <Home />
-        </div>
+        <Home />
       </div>
     </ThemeProvider>
   )
