@@ -1,6 +1,23 @@
 import { Box, Typography } from "@mui/material";
 import BigCard from "../components/BigCards";
-import { SiJavascript,SiInfluxdb,SiNginx, SiReact,SiNodedotjs,SiWebstorm,SiArduino,SiRailway,SiCloudflare, SiGit, SiPostgresql, SiExpress, SiPrisma, SiMui, SiRender,SiWordpress,SiElementor,SiWoo    } from 'react-icons/si';
+import { SiJavascript,
+  SiInfluxdb,
+  SiNginx, 
+  SiReact,
+  SiNodedotjs,
+  SiWebstorm,
+  SiArduino,
+  SiRailway,
+  SiCloudflare, 
+  SiGit, 
+  SiPostgresql, 
+  SiExpress, 
+  SiPrisma, 
+  SiMui, 
+  SiRender,
+  SiAstro ,
+  SiDaisyui,
+       } from 'react-icons/si';
 import {TbBrandThreejs} from "react-icons/tb";
 
 export default function Projects() {
@@ -18,11 +35,13 @@ export default function Projects() {
       { icon: SiRailway, nombre: "Railway" }
 
     ],
-    "Megatec": [
-      { icon: SiWordpress, nombre: "WordPress" },
-      { icon: SiElementor, nombre: "Elementor" },
-      { icon: SiWoo, nombre: "WooCommerce" },
+    "JDCladding": [
+      { icon: SiAstro, nombre: "Astro.js" },
+      { icon: SiDaisyui , nombre: "Daisyui" },
+      { icon: SiCloudflare, nombre: "Cloudflare" },
+      { icon: SiPostgresql, nombre: "Postgre SQL" },
     ],
+
     "Tamaplant":[
       {icon: SiInfluxdb, nombre: "InfluxDB"},
       { icon: SiCloudflare, nombre: "Cloudflare" },
@@ -49,12 +68,12 @@ export default function Projects() {
             enlace = 'https://simpleideas.cl/' />
 
           <BigCard
-            image='/chipeLibrosLogo.png'
-            titulo="Chipe/Libros"
-            subtitulo="E-Commerce"
-            descripcion="Chipe/Libros es un eccomerce chileno orientado a la venta de libros tanto nuevos como usados. Enfocado a estudiantes y lectores cotidianos. Ofreciendo precios accesibles y facilidad en la compra. Esto por un lado a través de la venta de libros nuevos y así mismo reciclados o de segunda mano."
-            iconos={iconosPorProyecto["Simple Ideas"]}
-            enlace='https://ecommercechipelibros.pages.dev/'
+            image='/ja-logo.webp'
+            titulo="JD Cladding Solutions SPA"
+            subtitulo="Landing Page"
+            descripcion="JD Cladding Solutions es una empresa chilena orientada a la instalación de techumbres, revestimientos, cielos modulares y celosías para proyectos residenciales y comerciales. Enfocada en clientes particulares y empresas a lo largo de todo Chile, ofreciendo materiales de primera calidad y cotización gratuita en menos de 48 horas."
+            iconos={iconosPorProyecto["JDCladding"]}
+            enlace='https://jainstalaciones-landing.jainstalacionesdev.workers.dev/'
              />
 
 
